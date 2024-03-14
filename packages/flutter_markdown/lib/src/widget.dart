@@ -375,7 +375,7 @@ class _MarkdownWidgetState extends State<MarkdownWidget>
   @override
   GestureRecognizer createLink(String text, String? href, String title) {
     final TapGestureRecognizer recognizer = TapGestureRecognizer()
-      ..onTap = () {
+      ..onTapUp = () {
         if (widget.onTapLink != null) {
           widget.onTapLink!(text, href, title);
         }
